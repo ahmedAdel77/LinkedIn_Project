@@ -5,6 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+import { FlexLayoutModule } from '@angular/flex-layout';
+
 
 //Angular Material Components
 import { MatDividerModule } from '@angular/material/divider';
@@ -90,6 +92,8 @@ import { SharedPostComponent } from './shared-post/shared-post.component';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+
+    FlexLayoutModule,
 
     MatDividerModule,
     MatCheckboxModule,
