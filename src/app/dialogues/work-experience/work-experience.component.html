@@ -1,0 +1,56 @@
+<div>
+  <div class="mat-headline ">Add experience</div>
+  <mat-divider></mat-divider>
+
+  <div class="example-container">
+    <mat-form-field appearance="fill">
+      <mat-label>Summary</mat-label>
+      <textarea matInput rows="5" class="text-area"></textarea>
+    </mat-form-field>
+  </div>
+
+  <form class="example-form">
+    <mat-form-field class="example-full-width">
+      <mat-label>Title</mat-label>
+      <input matInput placeholder="" value="">
+    </mat-form-field>
+
+    <mat-label>Employment type </mat-label>
+    <mat-select>
+      <mat-option *ngFor="let t of types" value="option">{{t}}</mat-option>
+    </mat-select>
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Company</mat-label>
+      <input matInput placeholder="" value="">
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <mat-label>Location</mat-label>
+      <input matInput placeholder="" value="">
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Start date</mat-label>
+      <input matInput [matDatepicker]="picker">
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>End date</mat-label>
+      <input matInput [matDatepicker]="picker">
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Headline</mat-label>
+      <textarea matInput rows="3" class="text-area"></textarea>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Description</mat-label>
+      <textarea matInput rows="5" class="text-area"></textarea>
+    </mat-form-field>
+  </form>
+
+  <button mat-raised-button class="bg-main-color text-white">Add</button>
+</div>

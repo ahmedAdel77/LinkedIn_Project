@@ -1,0 +1,751 @@
+<!--
+<mat-grid-list cols="12" rowHeight="100px">
+   <mat-grid-tile [colspan]="1" [rowspan]="6">
+   </mat-grid-tile>
+
+   <mat-grid-tile [colspan]="7" [rowspan]="6">
+      <mat-card class="maincard">
+         <img mat-card-image src="../../assets/images/wimg.jfif" class="img" />
+         <img src="../../assets/images/img.jfif" class=" walimg walimg__main" />
+         <mat-card-content class="card-content">
+            <div class="card">
+               <div class="personaldata">
+                  <h2>Name</h2>
+                  <h3> Description</h3>
+                  <span>coutry. </span>
+                  <span class=" h4 maincolor">connections. </span>
+                  <span class="h4 maincolor"> Contact info</span>
+
+               </div>
+               <div class="experience">
+                  <div class="buttons">
+
+                     <button [matMenuTriggerFor]="menu" mat-raised-button class="btn">Add profile section
+                        <mat-icon>arrow_drop_down</mat-icon>
+                     </button>
+
+
+                     <button mat-stroked-button [matMenuTriggerFor]="menu2">More
+
+                        <mat-icon>more_horiz</mat-icon>
+                     </button>
+
+                     <a>
+                        <mat-icon class="penicon maincolor">create</mat-icon>
+                     </a>
+                     <mat-menu #menu="matMenu">
+                        <mat-list>
+                           <mat-list-item>Intro
+                              <mat-icon>expand_more</mat-icon>
+                           </mat-list-item>
+                           <mat-divider></mat-divider>
+                           <mat-list-item>About
+
+                              <mat-icon>expand_more</mat-icon>
+                           </mat-list-item>
+                           <mat-divider></mat-divider>
+                           <mat-list-item>Background
+
+                              <mat-icon>expand_more</mat-icon>
+                           </mat-list-item>
+                           <mat-divider></mat-divider>
+                           <mat-list-item>Skills
+
+                              <mat-icon>expand_more</mat-icon>
+                           </mat-list-item>
+                           <mat-divider></mat-divider>
+                           <mat-list-item>Accomplishments
+                              <mat-icon>expand_more</mat-icon>
+                           </mat-list-item>
+                           <mat-divider></mat-divider>
+                           <mat-list-item>Adiitional info
+                              <mat-icon>expand_more</mat-icon>
+                           </mat-list-item>
+                           <mat-divider></mat-divider>
+                           <mat-list-item>Supportted languages
+                              <mat-icon>expand_more</mat-icon>
+                           </mat-list-item>
+                           <mat-divider></mat-divider>
+                        </mat-list>
+                     </mat-menu>
+                     <mat-menu #menu2="matMenu">
+                        <mat-list>
+                           <mat-list-item>share profile via msg</mat-list-item>
+                           <mat-divider></mat-divider>
+                           <mat-list-item>Save to pdf</mat-list-item>
+                           <mat-divider></mat-divider>
+
+                        </mat-list>
+                     </mat-menu>
+                  </div>
+                  <div class="exdata">
+                     <img src="../../assets/images/img.jfif" class="eximg walimg" />
+                     <a>your Experience</a>
+                  </div>
+               </div>
+
+
+            </div>
+         </mat-card-content>
+         <mat-card-footer>
+            <div class="showrecruiters">
+               <p> <strong>Show recruiters you’re open</strong> to job opportunities—you control who sees this.</p>
+               <a class="maincolor">get started</a>
+            </div>
+         </mat-card-footer>
+
+      </mat-card>
+   </mat-grid-tile>
+
+   <mat-grid-tile [colspan]="4" [rowspan]="6">
+
+      <mat-list>
+         <mat-list-item>Edit puplic profile &url
+            <mat-icon class="help">help_outline</mat-icon>
+         </mat-list-item>
+         <mat-divider></mat-divider>
+         <mat-list-item>Add profile in another language
+            <mat-icon class="help">help_outline</mat-icon>
+         </mat-list-item>
+         <mat-divider></mat-divider>
+      </mat-list>
+   </mat-grid-tile>
+
+   <mat-grid-tile [colspan]="1" [rowspan]="3">
+   </mat-grid-tile>
+
+   <mat-grid-tile [colspan]="7" [rowspan]="2">
+      <mat-card>
+
+         <mat-card-title class="spacer">About</mat-card-title>
+         <mat-card-content class="spacer">I am a Junior in Front end development graduated from faculty of computer and
+            information sciences Ain shams university
+            having skills in coding by c/c++/c# /python/HTML/CSS/JS/JQUERY/BOOTSTRAP/ANGULAR/NODEJS</mat-card-content>
+      </mat-card>
+   </mat-grid-tile>
+
+   <mat-grid-tile [colspan]="4" [rowspan]="1">
+   </mat-grid-tile>
+
+   <mat-grid-tile [colspan]="1" [rowspan]="1">
+   </mat-grid-tile>
+
+  <mat-grid-tile [colspan]="7" [rowspan]="2"> <!-- 4 works -->
+<!-- <mat-card>
+         <mat-card-title>
+            Your Dashboard
+         </mat-card-title>
+         <mat-card-subtitle>
+            Private to you
+         </mat-card-subtitle>
+         <!-- <mat-card-content class="spacer">
+            <mat-button-toggle-group name="fontStyle" aria-label="Font Style">
+               <mat-button-toggle value="bold"> <h2 class="maincolor">25</h2>
+                  <span>Who viewed your profile</span></mat-button-toggle>
+               <mat-button-toggle value="italic"> <h2 class="maincolor">0</h2>
+                  <span>Article views</span></mat-button-toggle>
+               <mat-button-toggle value="underline"> <h2 class="maincolor">2</h2>
+                  <span>Search appearances</span></mat-button-toggle>
+             </mat-button-toggle-group>
+            <div></div>
+         <!-- </mat-card-content>
+      </mat-card>
+   </mat-grid-tile>
+
+   <mat-grid-tile [colspan]="4" [rowspan]="2">
+   </mat-grid-tile>
+   <!--
+
+   <mat-grid-tile [colspan]="1" [rowspan]="4">
+   </mat-grid-tile>
+<!--6 works
+   <mat-grid-tile [colspan]="7" [rowspan]="4">
+
+      <!--
+      <mat-card>
+         <mat-card-title>Experience</mat-card-title>
+         <div class="Experiencescontainer">
+            <div class="Experiences">
+               <mat-list>
+                  <div class="AboutEducation margin-sm">
+                     <img class="walimg walimg--sm" src="../../assets/images/job.jfif">
+
+                     <div class="experienceandicon">
+
+                        <mat-list-item>
+                           <h2>Applications Developer</h2>
+                        </mat-list-item>
+                        <mat-icon class="penicon maincolor">create</mat-icon>
+                     </div>
+                  </div>
+                  <mat-list-item>
+                     <h3>Place</h3>
+                  </mat-list-item>
+                  <mat-list-item>
+                     <h4 class="datecolor">date</h4>
+                  </mat-list-item>
+                  <mat-divider></mat-divider>
+               </mat-list>
+               <mat-list>
+                  <div class="AboutEducation margin-sm">
+                     <img class="walimg walimg--sm" src="../../assets/images/job.jfif">
+
+                     <div class="experienceandicon">
+
+                        <mat-list-item>
+                           <h2>Front End Developer</h2>
+                        </mat-list-item>
+                        <mat-icon class="penicon maincolor">create</mat-icon>
+                     </div>
+                  </div>
+                  <mat-list-item>
+                     <h3>Place</h3>
+                  </mat-list-item>
+                  <mat-list-item>
+                     <h4 class="datecolor">date</h4>
+                  </mat-list-item>
+                  <mat-divider></mat-divider>
+               </mat-list>
+            </div>
+            <div class="editIcons">
+               <mat-icon>add</mat-icon>
+            </div>
+         </div>
+      </mat-card>
+   </mat-grid-tile>
+
+   <mat-grid-tile [colspan]="4" [rowspan]="4">
+   </mat-grid-tile>
+   <!--
+   <mat-grid-tile [colspan]="1" [rowspan]="2">
+   </mat-grid-tile>
+<!--6 works
+   <mat-grid-tile [colspan]="7" [rowspan]="5">
+      <mat-card>
+         <mat-card-title>Education</mat-card-title>
+         <div class="educationContainer">
+            <div class="Education">
+               <mat-list>
+                  <div class="AboutEducation margin-sm">
+                     <img class="walimg walimg--sm" src="../../assets/images/Ain_Shams_logo.png">
+
+                     <div class="educationandicon">
+
+                        <mat-list-item>
+                           <h2>Ain Shams University</h2>
+                        </mat-list-item>
+                        <mat-icon class="penicon maincolor">create</mat-icon>
+                     </div>
+                  </div>
+                  <mat-list-item>
+                     <h3>Place</h3>
+                  </mat-list-item>
+                  <mat-list-item>
+                     <h4 class="datecolor">date</h4>
+                  </mat-list-item>
+                  <mat-divider></mat-divider>
+                  <div class="AboutEducation margin-sm">
+                     <img class="walimg walimg--sm" src="../../assets/images/iti.png">
+                     <div class="educationandicon">
+                        <mat-list-item>
+
+                           <h2>9 months diploma</h2>
+
+                        </mat-list-item>
+                        <mat-icon class="penicon maincolor">create</mat-icon>
+                     </div>
+                  </div>
+                  <mat-list-item>
+                     <h3>Place</h3>
+                  </mat-list-item>
+                  <mat-list-item>
+                     <h4 class="datecolor">date</h4>
+                  </mat-list-item>
+                  <mat-divider></mat-divider>
+               </mat-list>
+            </div>
+            <div class="editIcons">
+               <mat-icon>add</mat-icon>
+            </div>
+         </div>
+      </mat-card>
+   </mat-grid-tile>
+
+   <mat-grid-tile [colspan]="4" [rowspan]="1">
+   </mat-grid-tile>
+
+   <!--
+   <!-- skills
+
+   <mat-grid-tile [colspan]="1" [rowspan]="2">
+   </mat-grid-tile>
+
+   <mat-grid-tile [colspan]="7" [rowspan]="4">
+      <mat-card>
+
+         <mat-card-title>Skills&Endordsment  <h4>Add a new skill  <mat-icon class="penicon maincolor">create</mat-icon></h4> </mat-card-title>
+         <div class="skillsContainer">
+
+            <div class="skills">
+               <mat-card-content>
+
+                  <mat-list>
+                     <mat-list-item>
+                        <h3>Front End Developer</h3>
+                     </mat-list-item>
+
+                     <mat-list-item>
+                        <h4><strong>someone name</strong> has endrosed you</h4>
+                     </mat-list-item>
+                     <mat-divider></mat-divider>
+                     <mat-list-item>
+                        <h3>Front End Developer</h3>
+                     </mat-list-item>
+
+                     <mat-list-item>
+                        <h4><strong>someone name</strong> has endrosed you</h4>
+                     </mat-list-item>
+                     <mat-divider></mat-divider>
+                  </mat-list>
+               </mat-card-content>
+            </div>
+
+             <div class="editSkils">
+
+
+            </div>
+         </div>
+      </mat-card>
+   </mat-grid-tile>
+
+   <mat-grid-tile [colspan]="4" [rowspan]="1">
+   </mat-grid-tile>
+
+
+</mat-grid-list> -->
+
+
+
+<div class="container margin-md" fxLayout fxLayout.xs="column" fxLayoutAlign="center" fxLayoutGap="5%"
+  fxLayoutGap.xs="0">
+  <div class="item item-1" fxFlex="10%"></div>
+  <div class="item item-2" fxFlex="55%">
+    <mat-card class="maincard">
+      <img mat-card-image src="../../assets/images/wimg.jfif" class="img" />
+      <img src="../../assets/images/img.jfif" class=" walimg walimg__main" />
+      <mat-card-content class="card-content">
+        <div class="card">
+          <div class="personaldata">
+            <h2>Name</h2>
+            <h3> Description</h3>
+            <span>country. </span>
+            <span class=" h4 maincolor">connections. </span>
+            <span class="h4 maincolor"> Contact info</span>
+
+          </div>
+          <div class="experience">
+            <div class="buttons">
+
+              <button [matMenuTriggerFor]="menu" mat-raised-button class="btn">Add profile section
+                <mat-icon>arrow_drop_down</mat-icon>
+              </button>
+
+
+              <button mat-stroked-button [matMenuTriggerFor]="menu2">More
+
+                <mat-icon>more_horiz</mat-icon>
+              </button>
+
+              <a>
+                <mat-icon class="penicon maincolor">create</mat-icon>
+              </a>
+              <!-- <mat-menu #menu="matMenu">
+                        <mat-list>
+                           <mat-list-item>Intro
+                              <mat-icon>expand_more</mat-icon>
+                           </mat-list-item>
+                           <mat-divider></mat-divider>
+                           <mat-list-item>About
+
+                              <mat-icon>expand_more</mat-icon>
+
+                           </mat-list-item>
+                           <mat-form-field>
+
+                              <mat-select>
+                                 <mat-option>1</mat-option>
+                                 <mat-option>2</mat-option>
+                                 <mat-option>3</mat-option>
+
+                              </mat-select>
+                           </mat-form-field>
+                           <mat-divider></mat-divider>
+                           <mat-list-item>Background
+
+                              <mat-icon>expand_more</mat-icon>
+                           </mat-list-item>
+                           <mat-divider></mat-divider>
+                           <mat-list-item>Skills
+
+                              <mat-icon>expand_more</mat-icon>
+                           </mat-list-item>
+                           <mat-divider></mat-divider>
+                           <mat-list-item>Accomplishments
+                              <mat-icon>expand_more</mat-icon>
+                           </mat-list-item>
+                           <mat-divider></mat-divider>
+                           <mat-list-item>Adiitional info
+                              <mat-icon>expand_more</mat-icon>
+                           </mat-list-item>
+                           <mat-divider></mat-divider>
+                           <mat-list-item>Supportted languages
+                              <mat-icon>expand_more</mat-icon>
+                           </mat-list-item>
+                           <mat-divider></mat-divider>
+                        </mat-list>
+                     </mat-menu> -->
+
+              <mat-menu #menu="matMenu">
+                <button mat-menu-item [matMenuTriggerFor]="intro">Intro</button>
+                <mat-divider></mat-divider>
+                <button mat-menu-item [matMenuTriggerFor]="about">About</button>
+                <mat-divider></mat-divider>
+                <button mat-menu-item [matMenuTriggerFor]="featured">Featured</button>
+                <mat-divider></mat-divider>
+                <button mat-menu-item [matMenuTriggerFor]="background">Background</button>
+                <mat-divider></mat-divider>
+                <button mat-menu-item [matMenuTriggerFor]="skills">Skills</button>
+                <mat-divider></mat-divider>
+                <button mat-menu-item [matMenuTriggerFor]="accomplishments">Accomplishments</button>
+                <mat-divider></mat-divider>
+                <button mat-menu-item [matMenuTriggerFor]="additional">Additional</button>
+                <mat-divider></mat-divider>
+                <button mat-menu-item [matMenuTriggerFor]="supported">Supported languages</button>
+                <mat-divider></mat-divider>
+
+
+              </mat-menu>
+
+              <mat-menu #intro="matMenu">
+
+              </mat-menu>
+
+              <mat-menu #about="matMenu">
+
+                <button mat-menu-item (click)="openDialog('Summary')"> Summary <mat-icon>add_circle_outline
+                  </mat-icon> </button>
+              </mat-menu>
+              <mat-menu #featured="matMenu">
+                <button mat-menu-item>Posts <mat-icon>add_circle_outline</mat-icon></button>
+                <button mat-menu-item>Articles <mat-icon>add_circle_outline</mat-icon></button>
+                <button mat-menu-item (click)="openDialog('Links')">Links <mat-icon>add_circle_outline
+                  </mat-icon></button>
+
+                <button mat-menu-item (click)="openMedia()">Media <mat-icon>add_circle_outline</mat-icon>
+                </button>
+              </mat-menu>
+              <mat-menu #background="matMenu">
+                <button mat-menu-item (click)="openDialog('WorkExperience')">Work experience <mat-icon>
+                    add_circle_outline</mat-icon></button>
+                <button mat-menu-item (click)="openDialog('Education')">Education <mat-icon>add_circle_outline
+                  </mat-icon></button>
+                <button mat-menu-item>License & Certification <mat-icon>add_circle_outline</mat-icon></button>
+                <button mat-menu-item>Volunteer experience <mat-icon>add_circle_outline</mat-icon></button>
+              </mat-menu>
+
+              <mat-menu #skills="matMenu">
+                <button mat-menu-item (click)="openDialog('Skills')">Skills <mat-icon>add_circle_outline
+                  </mat-icon></button>
+              </mat-menu>
+
+              <mat-menu #accomplishments="matMenu">
+                <button mat-menu-item>publications <mat-icon>add_circle_outline</mat-icon></button>
+                <button mat-menu-item>Patents <mat-icon>add_circle_outline</mat-icon></button>
+                <button mat-menu-item>Courses <mat-icon>add_circle_outline</mat-icon></button>
+                <button mat-menu-item>Projects <mat-icon>add_circle_outline</mat-icon></button>
+                <button mat-menu-item>Honors & Awards <mat-icon>add_circle_outline</mat-icon></button>
+                <button mat-menu-item>Test scores <mat-icon>add_circle_outline</mat-icon></button>
+                <button mat-menu-item>Languages <mat-icon>add_circle_outline</mat-icon></button>
+                <button mat-menu-item>Organizations <mat-icon>add_circle_outline</mat-icon></button>
+              </mat-menu>
+
+              <mat-menu #additional="matMenu">
+                <button mat-menu-item (click)="openDialog('RequestRecommendation')"> Request a recommendation
+                  <mat-icon>add_circle_outline</mat-icon></button>
+
+
+
+              </mat-menu>
+              <mat-menu #supported="matMenu">
+                <button (click)="openDialog('Language')" mat-menu-item>Supported languages <mat-icon>
+                    add_circle_outline</mat-icon></button>
+              </mat-menu>
+
+
+              <mat-menu #menu2="matMenu">
+                <mat-list>
+                  <mat-list-item>share profile via msg</mat-list-item>
+                  <mat-divider></mat-divider>
+                  <mat-list-item>Save to pdf</mat-list-item>
+                  <mat-divider></mat-divider>
+
+                </mat-list>
+              </mat-menu>
+            </div>
+            <div class="exdata margin-top-sm">
+              <img src="../../assets/images/img.jfif" class="eximg walimg" />
+              <a>your Experience</a>
+            </div>
+          </div>
+
+
+        </div>
+      </mat-card-content>
+      <mat-card-footer>
+        <div class="showrecruiters">
+          <p> <strong>Show recruiters you’re open</strong> to job opportunities—you control who sees this.</p>
+          <a class="maincolor">get started</a>
+        </div>
+      </mat-card-footer>
+
+    </mat-card>
+
+
+  </div>
+  <div class="item item-3" fxFlex="25%">
+
+    <mat-list>
+      <mat-list-item>Edit puplic profile &url
+        <mat-icon class="help">help_outline</mat-icon>
+      </mat-list-item>
+      <!-- <mat-divider></mat-divider> -->
+      <hr class="mydivider">
+      <mat-list-item>Add profile in another language
+        <mat-icon class="help">help_outline</mat-icon>
+      </mat-list-item>
+      <hr class="mydivider">
+      <!-- <mat-divider></mat-divider> -->
+    </mat-list>
+  </div>
+</div>
+
+<div class="container margin-md " fxLayout fxLayout.xs="column" fxLayoutAlign="center" fxLayoutGap="5%"
+  fxLayoutGap.xs="0">
+  <div class="item item-1" fxFlex="10%">
+  </div>
+  <div class="item item-2" fxFlex="55%">
+    <mat-card>
+
+      <mat-card-title class="spacer">About</mat-card-title>
+      <mat-card-content class="spacer">I am a Junior in Front end development graduated from faculty of computer and
+        information sciences Ain shams university
+        having skills in coding by c/c++/c# /python/HTML/CSS/JS/JQUERY/BOOTSTRAP/ANGULAR/NODEJS</mat-card-content>
+    </mat-card>
+  </div>
+  <div class="item item-1" fxFlex="25%">
+  </div>
+</div>
+
+<div class="container margin-md" fxLayout fxLayout.xs="column" fxLayoutAlign="center" fxLayoutGap="5%"
+  fxLayoutGap.xs="0">
+  <div class="item item-1" fxFlex="10%">
+  </div>
+  <div class="item item-2" fxFlex="55%">
+
+    <mat-card>
+      <mat-card-title>
+        Your Dashboard
+      </mat-card-title>
+      <mat-card-subtitle>
+        Private to you
+      </mat-card-subtitle>
+      <mat-card-content class="spacer exdata fullWidth">
+
+        <mat-button-toggle-group name="fontStyle " class="fullWidth" aria-label="Font Style">
+          <mat-button-toggle value="bold" class="equalizeWidth">
+            <h2 class="maincolor">25</h2>
+            <span>Who viewed your profile</span>
+          </mat-button-toggle>
+          <mat-button-toggle value="italic" class="equalizeWidth">
+            <h2 class="maincolor">0</h2>
+            <span>Article views</span>
+          </mat-button-toggle>
+          <mat-button-toggle value="underline" class="equalizeWidth">
+            <h2 class="maincolor">2</h2>
+            <span>Search appearances</span>
+          </mat-button-toggle>
+        </mat-button-toggle-group>
+        <div></div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+  <div class="item item-1" fxFlex="25%">
+  </div>
+</div>
+
+<div class="container margin-md" fxLayout fxLayout.xs="column" fxLayoutAlign="center" fxLayoutGap="5%"
+  fxLayoutGap.xs="0">
+  <div class="item item-1" fxFlex="10%">
+  </div>
+  <div class="item item-2" fxFlex="55%">
+    <mat-card>
+      <mat-card-title>Experience</mat-card-title>
+      <div class="Experiencescontainer">
+        <div class="Experiences">
+          <mat-list>
+            <div class="AboutEducation margin-sm">
+              <img class="walimg walimg--sm" src="../../assets/images/job.jfif">
+
+              <div class="experienceandicon">
+
+                <mat-list-item>
+                  <h2>Applications Developer</h2>
+                </mat-list-item>
+                <mat-icon class="penicon maincolor">create</mat-icon>
+              </div>
+            </div>
+            <mat-list-item>
+              <h3>Place</h3>
+            </mat-list-item>
+            <mat-list-item>
+              <h4 class="datecolor">date</h4>
+            </mat-list-item>
+            <mat-divider></mat-divider>
+          </mat-list>
+          <mat-list>
+            <div class="AboutEducation margin-sm">
+              <img class="walimg walimg--sm" src="../../assets/images/job.jfif">
+
+              <div class="experienceandicon">
+
+                <mat-list-item>
+                  <h2>Front End Developer</h2>
+                </mat-list-item>
+                <mat-icon class="penicon maincolor">create</mat-icon>
+              </div>
+            </div>
+            <mat-list-item>
+              <h3>Place</h3>
+            </mat-list-item>
+            <mat-list-item>
+              <h4 class="datecolor">date</h4>
+            </mat-list-item>
+            <mat-divider></mat-divider>
+          </mat-list>
+        </div>
+        <div class="editIcons">
+          <mat-icon>add</mat-icon>
+
+        </div>
+      </div>
+    </mat-card>
+  </div>
+  <div class="item item-1" fxFlex="25%">
+  </div>
+</div>
+
+<div class="container margin-md" fxLayout fxLayout.xs="column" fxLayoutAlign="center" fxLayoutGap="5%"
+  fxLayoutGap.xs="0">
+  <div class="item item-1" fxFlex="10%">
+  </div>
+  <div class="item item-2" fxFlex="55%">
+
+    <mat-card>
+      <mat-card-title>Education</mat-card-title>
+      <div class="educationContainer">
+        <div class="Education">
+          <mat-list>
+            <div class="AboutEducation margin-sm">
+              <img class="walimg walimg--sm" src="../../assets/images/Ain_Shams_logo.png">
+
+              <div class="educationandicon">
+
+                <mat-list-item>
+                  <h2>Ain Shams University</h2>
+                </mat-list-item>
+                <mat-icon class="penicon maincolor">create</mat-icon>
+              </div>
+            </div>
+            <mat-list-item>
+              <h3>Place</h3>
+            </mat-list-item>
+            <mat-list-item>
+              <h4 class="datecolor">date</h4>
+            </mat-list-item>
+            <mat-divider></mat-divider>
+            <div class="AboutEducation margin-sm">
+              <img class="walimg walimg--sm" src="../../assets/images/iti.png">
+              <div class="educationandicon">
+                <mat-list-item>
+
+                  <h2>9 months diploma</h2>
+
+                </mat-list-item>
+                <mat-icon class="penicon maincolor">create</mat-icon>
+              </div>
+            </div>
+            <mat-list-item>
+              <h3>Place</h3>
+            </mat-list-item>
+            <mat-list-item>
+              <h4 class="datecolor">date</h4>
+            </mat-list-item>
+            <mat-divider></mat-divider>
+          </mat-list>
+        </div>
+        <div class="editIcons">
+          <mat-icon>add</mat-icon>
+        </div>
+      </div>
+    </mat-card>
+  </div>
+  <div class="item item-1" fxFlex="25%">
+  </div>
+
+</div>
+
+<div class="container margin-md " fxLayout fxLayout.xs="column" fxLayoutAlign="center" fxLayoutGap="5%"
+  fxLayoutGap.xs="0">
+  <div class="item item-1" fxFlex="10%">
+  </div>
+  <div class="item item-2" fxFlex="55%">
+    <mat-card>
+      <mat-card-title>Skills&Endordsment <h4>Add a new skill <mat-icon class="penicon maincolor">create</mat-icon>
+        </h4>
+      </mat-card-title>
+      <div class="skillsContainer">
+
+        <div class="skills">
+          <mat-card-content>
+
+            <mat-list>
+              <mat-list-item>
+                <h3>Front End Developer</h3>
+              </mat-list-item>
+
+              <mat-list-item>
+                <h4><strong>someone name</strong> has endrosed you</h4>
+              </mat-list-item>
+              <mat-divider></mat-divider>
+              <mat-list-item>
+                <h3>Front End Developer</h3>
+              </mat-list-item>
+
+              <mat-list-item>
+                <h4><strong>someone name</strong> has endrosed you</h4>
+              </mat-list-item>
+              <mat-divider></mat-divider>
+            </mat-list>
+          </mat-card-content>
+        </div>
+
+        <div class="editSkils">
+
+
+        </div>
+      </div>
+
+    </mat-card>
+  </div>
+  <div class="item item-3" fxFlex="25%"></div>
+</div>
