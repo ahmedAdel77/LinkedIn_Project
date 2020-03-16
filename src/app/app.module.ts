@@ -61,6 +61,7 @@ import { PostFooterComponent } from './post/post-footer/post-footer.component';
 import { PostHeaderComponent } from './post/post-header/post-header.component';
 import { PostReactionsInfoComponent } from './post/post-reactions-info/post-reactions-info.component';
 import { SharedPostComponent } from './shared-post/shared-post.component';
+import { NetworkComponent } from './network/network.component';
 
 
 @NgModule({
@@ -86,7 +87,8 @@ import { SharedPostComponent } from './shared-post/shared-post.component';
     PostFooterComponent,
     PostHeaderComponent,
     PostReactionsInfoComponent,
-    SharedPostComponent
+    SharedPostComponent,
+    NetworkComponent
   ],
   imports: [
     BrowserModule,
