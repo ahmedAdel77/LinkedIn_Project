@@ -1,5 +1,6 @@
+import { Summary } from './../../Model/Summary';
 import { Component, OnInit } from '@angular/core';
-
+import { NgForm } from '@angular/forms';
 @Component({
   selector: 'app-summary',
   templateUrl: './summary.component.html',
@@ -8,8 +9,17 @@ import { Component, OnInit } from '@angular/core';
 export class SummaryComponent implements OnInit {
 
   constructor() { }
+  clientsummary: Summary ;
+  ngOnInit() {
+    this.clientsummary = {
+      id: 0,
+      summary: "",
+    };
 
-  ngOnInit(): void {
   }
-
+  onsubmit(myform: NgForm) {
+    console.log(this.clientsummary);
+   JSON.parse(JSON.stringify(this.clientsummary));
+    myform.reset();
+  }
 }

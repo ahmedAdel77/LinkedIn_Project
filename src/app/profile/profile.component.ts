@@ -15,6 +15,7 @@ import { WorkExperienceComponent } from '../dialogues/work-experience/work-exper
 import { LinksComponent } from '../dialogues/links/links.component';
 import{WorkExperiencesServeicesService}from'../dialogues/work-experience/work-experiences-serveices.service';
 import { Experience } from "../Model/Experience";
+import { PostCreateComponent } from '../post/post-create/post-create.component';
 
 @Component({
   selector: "app-profile",
@@ -58,19 +59,26 @@ editDialog(e: any, workex: Experience){
 
 }
 
-  openDialog(e: any): void {
-    let arr = [LanguageComponent, SkillsComponent, EducationComponent,
-      RequestRecommendationComponent, SummaryComponent, WorkExperienceComponent, LinksComponent]
-    let temp: any = e + 'Component';
-    // console.log(temp);
-    let res = arr.filter(comp => comp.name == temp)
-    // console.log( res)
-    const dialogRef = this.dialog.open(res[0], {
-      width: "550px",
-    });
-
-  }
-
+openDialog(e: any): void {
+  let arr = [
+    LanguageComponent,
+    SkillsComponent,
+    EducationComponent,
+    RequestRecommendationComponent,
+    SummaryComponent,
+    WorkExperienceComponent,
+    LinksComponent,
+    PostCreateComponent
+  ];
+  let temp: any = e + "Component";
+  console.log(temp);
+  let res = arr.filter(comp => comp.name == temp);
+  console.log( res)
+  const dialogRef = this.dialog.open(res[0], {
+    width: "550px",
+    maxHeight:"600px"
+  });
+}
   openMedia() {
 
   }

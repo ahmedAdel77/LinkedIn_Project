@@ -3,6 +3,7 @@
 html,
 body {
   height: 100%;
+  margin: 0;
 }
 
 html {
@@ -10,29 +11,25 @@ html {
   margin: 0;
   box-sizing: border-box;
 }
-
-body {
-  margin: 0;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
-}
-
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .main-color{
-    color:#0378aa;
+  color:#0378aa;
 }
 .bg-main-color{
-    background-color: #0378aa;
+  background-color: #0378aa;
 }
 .text-center{
-    text-align: center;
+  text-align: center;
 }
 a{
-    text-decoration: none;
+  text-decoration: none;
 }
 .hidden{
-    display:none
+  display:none
 }
 .text-white{
-    color:#fff
+  color:#fff
+}
+.saveBtn{
+  float: right;
+  margin-top: 3%;
 }
