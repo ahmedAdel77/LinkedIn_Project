@@ -3,13 +3,21 @@
   <mat-divider></mat-divider>
 
   <div class="example-container">
-
+    <form #summaryform="ngForm"  class="example-form">
 
     <mat-form-field appearance="fill">
       <mat-label>Summary</mat-label>
-      <textarea matInput rows="5" class="text-area"></textarea>
+      <textarea matInput rows="5" class="text-area form-control" 
+          [(ngModel)]="clientsummary.summary"
+          name="summary"
+          #summary="ngModel"
+          [ngClass]="{
+            'is-invalid': summaryform.submitted && summary.invalid && summary.touched
+          }"
+          required></textarea>
     </mat-form-field>
-
+    <button mat-raised-button class="bg-main-color text-white" (click)="onsubmit(summaryform)" >Add</button>
+  </form>
   </div>
-  <button mat-raised-button class="bg-main-color text-white">Add</button>
+
 </div>
