@@ -1,10 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import{FormsModule} from"@angular/forms";
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import { MatNativeDateModule } from "@angular/material/core";
 import { FlexLayoutModule } from '@angular/flex-layout';
 
 
@@ -40,9 +40,6 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatTableModule } from '@angular/material/table';
 import { MatSortModule } from '@angular/material/sort';
 import { MatPaginatorModule } from '@angular/material/paginator';
-import { MatNativeDateModule } from "@angular/material/core";
-
-
 import { ProfileComponent } from './profile/profile.component';
 import { EducationComponent } from './dialogues/education/education.component';
 import { LanguageComponent } from './dialogues/language/language.component';
@@ -95,11 +92,12 @@ import { NetworkComponent } from './network/network.component';
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule,
     BrowserAnimationsModule,
 
     FlexLayoutModule,
-
+    MatNativeDateModule,
     MatDividerModule,
     MatCheckboxModule,
     MatCheckboxModule,
@@ -132,8 +130,6 @@ import { NetworkComponent } from './network/network.component';
     MatTableModule,
     MatSortModule,
     MatPaginatorModule,
-    MatNativeDateModule,
-    MatDatepickerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

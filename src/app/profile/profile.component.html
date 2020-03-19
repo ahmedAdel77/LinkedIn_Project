@@ -59,6 +59,7 @@
                 <button mat-menu-item (click)="openDialog('Summary')"> Summary <mat-icon>add_circle_outline
                   </mat-icon> </button>
               </mat-menu>
+
               <mat-menu #featured="matMenu">
                 <button mat-menu-item (click)="openDialog('PostCreate')">Posts <mat-icon>add_circle_outline</mat-icon>
                 </button>
@@ -209,51 +210,38 @@
     <mat-card>
       <mat-card-title>Experience</mat-card-title>
       <div class="Experiencescontainer">
-        <div class="Experiences">
-          <mat-list>
-            <div class="AboutEducation margin-sm">
+        <div class="Aboutexperience">
+          <mat-list *ngFor= "let workplace of workplaces">
+
+            <div  class="experienceandicon margin-sm" >
               <img class="walimg walimg--sm" src="../../assets/images/job.jfif">
-
-              <div class="experienceandicon">
-
-                <mat-list-item>
-                  <h2>Applications Developer</h2>
+              
+              <mat-list-item >
+                <h2>{{workplace.title}}</h2>
                 </mat-list-item>
-                <mat-icon class="penicon maincolor">create</mat-icon>
               </div>
-            </div>
+              <div class="experienceandicon">
+               
+                <mat-list-item >
+                  <h3>{{workplace.Name}}</h3>
+                </mat-list-item>
+                <mat-icon class="penicon maincolor" (click)="editDialog('WorkExperience',workplace);">create</mat-icon>
+              </div>
+           
             <mat-list-item>
-              <h3>Place</h3>
+              <h3>{{workplace.location}}</h3>
             </mat-list-item>
             <mat-list-item>
-              <h4 class="datecolor">date</h4>
+              <h4 class="datecolor">{{workplace.startDate| date }} / {{workplace.endDate| date}}</h4>
             </mat-list-item>
             <mat-divider></mat-divider>
           </mat-list>
-          <mat-list>
-            <div class="AboutEducation margin-sm">
-              <img class="walimg walimg--sm" src="../../assets/images/job.jfif">
 
-              <div class="experienceandicon">
-
-                <mat-list-item>
-                  <h2>Front End Developer</h2>
-                </mat-list-item>
-                <mat-icon class="penicon maincolor">create</mat-icon>
-              </div>
-            </div>
-            <mat-list-item>
-              <h3>Place</h3>
-            </mat-list-item>
-            <mat-list-item>
-              <h4 class="datecolor">date</h4>
-            </mat-list-item>
-            <mat-divider></mat-divider>
-          </mat-list>
-        </div>
+          
+        </div> 
         <div class="editIcons">
           <mat-icon>add</mat-icon>
-
+         
         </div>
       </div>
     </mat-card>
