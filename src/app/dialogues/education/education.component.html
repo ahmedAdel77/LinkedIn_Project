@@ -1,1 +1,65 @@
-<p>education works!</p>
+<div>
+  <div fxLayout="row" fxLayoutAlign="space-between start">
+    <div class="mat-headline ">Add education</div>
+    <div><button mat-flat-button (click)="onNoClick()">
+        <mat-icon>close</mat-icon>
+      </button></div>
+  </div>
+  <mat-divider></mat-divider>
+
+
+  <form class="example-form">
+
+    <mat-form-field class="example-full-width">
+      <mat-label>School</mat-label>
+      <input matInput placeholder="" value="">
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Degree</mat-label>
+      <input matInput placeholder="" value="">
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Field of study</mat-label>
+      <input matInput placeholder="" value="">
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Start year</mat-label>
+      <input matInput [matDatepicker]="pickerstart">
+      <mat-datepicker-toggle matSuffix [for]="pickerstart"></mat-datepicker-toggle>
+      <mat-datepicker #pickerstart startView="multi-year"></mat-datepicker>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>End year</mat-label>
+      <input matInput [matDatepicker]="pickerend">
+      <mat-datepicker-toggle matSuffix [for]="pickerend"></mat-datepicker-toggle>
+      <mat-datepicker #pickerend></mat-datepicker>
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <mat-label>Grade</mat-label>
+      <input matInput placeholder="" value="">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Activities & societies</mat-label>
+      <textarea matInput rows="3" class="text-area"></textarea>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Description</mat-label>
+      <textarea matInput rows="5" class="text-area"></textarea>
+    </mat-form-field>
+    <div>
+      <div class="mat-subheading-2">Media</div>
+      <p>Add or link to external documents, photos, sites, videos, and presentations.</p>
+      <div fxLayout="row" fxLayoutAlign="space-between start">
+        <button mat-raised-button class=" text-white bg-main-color btn">Upload</button>
+        <button mat-raised-button class="bg-main-color text-white btn">Link</button>
+      </div>
+    </div>
+  </form>
+
+  <button mat-raised-button class="bg-main-color text-white saveBtn">Save</button>
+</div>

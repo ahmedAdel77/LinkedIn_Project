@@ -2,14 +2,11 @@
   <div class="mat-headline ">Add experience</div>
   <mat-divider></mat-divider>
 
-  <div class="example-container">
+  <form class="example-form">
     <mat-form-field appearance="fill">
       <mat-label>Summary</mat-label>
       <textarea matInput rows="5" class="text-area"></textarea>
     </mat-form-field>
-  </div>
-
-  <form class="example-form">
     <mat-form-field class="example-full-width">
       <mat-label>Title</mat-label>
       <input matInput placeholder="" value="">
@@ -31,15 +28,15 @@
 
     <mat-form-field>
       <mat-label>Start date</mat-label>
-      <input matInput [matDatepicker]="picker">
-      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-      <mat-datepicker #picker></mat-datepicker>
+      <input matInput [matDatepicker]="pickerstart">
+      <mat-datepicker-toggle matSuffix [for]="pickerstart"></mat-datepicker-toggle>
+      <mat-datepicker #pickerstart></mat-datepicker>
     </mat-form-field>
     <mat-form-field>
       <mat-label>End date</mat-label>
-      <input matInput [matDatepicker]="picker">
-      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-      <mat-datepicker #picker></mat-datepicker>
+      <input matInput [matDatepicker]="pickerend">
+      <mat-datepicker-toggle matSuffix [for]="pickerend"></mat-datepicker-toggle>
+      <mat-datepicker #pickerend></mat-datepicker>
     </mat-form-field>
 
     <mat-form-field appearance="fill">

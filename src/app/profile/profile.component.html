@@ -29,52 +29,6 @@
               <a>
                 <mat-icon class="penicon maincolor">create</mat-icon>
               </a>
-              <!-- <mat-menu #menu="matMenu">
-                        <mat-list>
-                           <mat-list-item>Intro
-                              <mat-icon>expand_more</mat-icon>
-                           </mat-list-item>
-                           <mat-divider></mat-divider>
-                           <mat-list-item>About
-
-                              <mat-icon>expand_more</mat-icon>
-
-                           </mat-list-item>
-                           <mat-form-field>
-
-                              <mat-select>
-                                 <mat-option>1</mat-option>
-                                 <mat-option>2</mat-option>
-                                 <mat-option>3</mat-option>
-
-                              </mat-select>
-                           </mat-form-field>
-                           <mat-divider></mat-divider>
-                           <mat-list-item>Background
-
-                              <mat-icon>expand_more</mat-icon>
-                           </mat-list-item>
-                           <mat-divider></mat-divider>
-                           <mat-list-item>Skills
-
-                              <mat-icon>expand_more</mat-icon>
-                           </mat-list-item>
-                           <mat-divider></mat-divider>
-                           <mat-list-item>Accomplishments
-                              <mat-icon>expand_more</mat-icon>
-                           </mat-list-item>
-                           <mat-divider></mat-divider>
-                           <mat-list-item>Adiitional info
-                              <mat-icon>expand_more</mat-icon>
-                           </mat-list-item>
-                           <mat-divider></mat-divider>
-                           <mat-list-item>Supportted languages
-                              <mat-icon>expand_more</mat-icon>
-                           </mat-list-item>
-                           <mat-divider></mat-divider>
-                        </mat-list>
-                     </mat-menu> -->
-
               <mat-menu #menu="matMenu">
                 <button mat-menu-item [matMenuTriggerFor]="intro">Intro</button>
                 <mat-divider></mat-divider>
@@ -106,7 +60,8 @@
                   </mat-icon> </button>
               </mat-menu>
               <mat-menu #featured="matMenu">
-                <button mat-menu-item>Posts <mat-icon>add_circle_outline</mat-icon></button>
+                <button mat-menu-item (click)="openDialog('PostCreate')">Posts <mat-icon>add_circle_outline</mat-icon>
+                </button>
                 <button mat-menu-item>Articles <mat-icon>add_circle_outline</mat-icon></button>
                 <button mat-menu-item (click)="openDialog('Links')">Links <mat-icon>add_circle_outline
                   </mat-icon></button>

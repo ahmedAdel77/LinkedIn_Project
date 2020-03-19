@@ -16,7 +16,7 @@ export class PostBoxComponent implements OnInit {
 
   openDialog(): void {
     const dialogRef = this.dialog.open(PostCreateComponent, {
-      width: '500px',
+      width: '550px',
       data: {}
     });
 

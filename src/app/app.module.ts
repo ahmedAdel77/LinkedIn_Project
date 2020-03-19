@@ -40,6 +40,9 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatTableModule } from '@angular/material/table';
 import { MatSortModule } from '@angular/material/sort';
 import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatNativeDateModule } from "@angular/material/core";
+
+
 import { ProfileComponent } from './profile/profile.component';
 import { EducationComponent } from './dialogues/education/education.component';
 import { LanguageComponent } from './dialogues/language/language.component';
@@ -129,6 +132,8 @@ import { NetworkComponent } from './network/network.component';
     MatTableModule,
     MatSortModule,
     MatPaginatorModule,
+    MatNativeDateModule,
+    MatDatepickerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

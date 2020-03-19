@@ -1,1 +1,25 @@
-<p>skills works!</p>
+<div>
+    <div fxLayout="row" fxLayoutAlign="space-between start">
+      <div class="mat-headline ">Add skill</div>
+      <div><button mat-flat-button (click)="onNoClick()">
+          <mat-icon>close</mat-icon>
+        </button></div>
+    </div>
+    <mat-divider></mat-divider>
+  <br>
+  
+    <form class="example-form">
+  
+      <mat-form-field class="example-full-width">
+        <mat-label>Skill</mat-label>
+        <input matInput placeholder="" value="">
+      </mat-form-field>
+    
+    </form>
+  
+    <div class="skill-tag">
+        <span class="tag" >HTML</span>
+    </div>
+    <button mat-raised-button class="bg-main-color text-white saveBtn">Save</button>
+  </div>
+  
