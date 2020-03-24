@@ -40,6 +40,7 @@ mat-form-field {
   /* border-radius: 8px; */
   border: 1px solid black;
   margin-bottom: 2%;
+  padding: 6px;
 }
 
 .example-form {
@@ -90,4 +91,16 @@ button {
 
 .mat-subheading-1 {
   color: grey
+}
+
+
+.errormsg
+{
+  background-color: #D11124;
+  color: #fff;
+  text-align: center;
+  width: 370px;
+  margin: auto;
+  height: 50px;
+  line-height: 50px;
 }

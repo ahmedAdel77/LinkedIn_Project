@@ -1,7 +1,8 @@
 import { Component, Input } from '@angular/core';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
-import { Observable } from 'rxjs';
+import { Observable, Subscription } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
+import { AuthService } from '../registeration/signup/signup.service';
 
 export interface Tile {
   color: string;
@@ -16,6 +17,18 @@ export interface Tile {
   styleUrls: ['./nav.component.scss']
 })
 export class NavComponent {
+
+  // {text: 'Two', cols:8 , rows: 2, color: 'transparent'},
+  // {text: '', cols: 2, rows: 1, color: 'transparent'},
+  // constructor(private breakpointObserver: BreakpointObserver) { }
+
+
+  constructor(
+    private breakpointObserver: BreakpointObserver,
+    private authService: AuthService
+  ) { }
+  isAuthenticated = false;
+  private userSub: Subscription;
 
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
     .pipe(
@@ -33,8 +46,19 @@ export class NavComponent {
     { text: '', cols: 8, rows: 1, color: 'transparent' },
   ];
 
-  // {text: 'Two', cols:8 , rows: 2, color: 'transparent'},
-  // {text: '', cols: 2, rows: 1, color: 'transparent'},
-  constructor(private breakpointObserver: BreakpointObserver) { }
+  value = 'Search';
+
+  // tslint:disable-next-line: use-lifecycle-interface
+  ngOnInit() {
+    this.userSub = this.authService.user.subscribe(user => {
+      this.isAuthenticated = !!user;
+      console.log(!user);
+      console.log(!!user);
+    });
+  }
+
+  onLogout() {
+    this.authService.logout();
+  }
 
 }

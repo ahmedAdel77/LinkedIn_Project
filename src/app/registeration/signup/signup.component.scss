@@ -44,6 +44,7 @@ mat-form-field {
   /* border-radius: 8px; */
   border: 1px solid black;
   margin-bottom: 2%;
+  padding: 6px;
 }
 
 .example-form {
@@ -90,3 +91,25 @@ button {
 
   padding-bottom: 3%;
 }
+
+.errormsg
+{
+  background-color: #D11124;
+  color: #fff;
+  text-align: center;
+  width: 402px;
+  margin: auto;
+  height: 50px;
+  line-height: 50px;
+}
+.donemsg
+{
+  background-color: green;
+  color: #fff;
+  text-align: center;
+  width: 402px;
+  margin: auto;
+  height: 50px;
+  line-height: 50px;
+}
+

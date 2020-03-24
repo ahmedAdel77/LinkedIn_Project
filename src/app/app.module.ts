@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatNativeDateModule } from "@angular/material/core";
 import { FlexLayoutModule } from '@angular/flex-layout';
+import {HttpClientModule} from '@angular/common/http';
 
 
 //Angular Material Components
@@ -62,6 +63,8 @@ import { PostHeaderComponent } from './post/post-header/post-header.component';
 import { PostReactionsInfoComponent } from './post/post-reactions-info/post-reactions-info.component';
 import { SharedPostComponent } from './shared-post/shared-post.component';
 import { NetworkComponent } from './network/network.component';
+import { SharedComponent } from './shared/shared.component';
+import { SignoutComponent } from './signout/signout.component';
 
 
 @NgModule({
@@ -88,7 +91,9 @@ import { NetworkComponent } from './network/network.component';
     PostHeaderComponent,
     PostReactionsInfoComponent,
     SharedPostComponent,
-    NetworkComponent
+    NetworkComponent,
+    SharedComponent,
+    SignoutComponent
   ],
   imports: [
     BrowserModule,
@@ -130,6 +135,7 @@ import { NetworkComponent } from './network/network.component';
     MatTableModule,
     MatSortModule,
     MatPaginatorModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
