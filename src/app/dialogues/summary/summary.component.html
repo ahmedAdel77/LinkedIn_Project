@@ -1,5 +1,10 @@
 <div>
-  <div class="mat-headline ">Edit about</div>
+  <div fxLayout="row" fxLayoutAlign="space-between start">
+    <div class="mat-headline ">Edit about</div>
+    <div><button mat-flat-button (click)="onNoClick()">
+        <mat-icon>close</mat-icon>
+      </button></div>
+  </div>
   <mat-divider></mat-divider>
 
   <div class="example-container">
@@ -7,16 +12,13 @@
 
     <mat-form-field appearance="fill">
       <mat-label>Summary</mat-label>
-      <textarea matInput rows="5" class="text-area form-control" 
+      <textarea matInput wrap="hard" rows="5" class="text-area" 
           [(ngModel)]="clientsummary.summary"
-          name="summary"
-          #summary="ngModel"
-          [ngClass]="{
-            'is-invalid': summaryform.submitted && summary.invalid && summary.touched
-          }"
+          name="mysummary"
+          #mysummary="ngModel"
           required></textarea>
     </mat-form-field>
-    <button mat-raised-button class="bg-main-color text-white" (click)="onsubmit(summaryform)" >Add</button>
+    <button mat-raised-button class="bg-main-color text-white saveBtn" (click)="onsubmit(summaryform)" >Add</button>
   </form>
   </div>
 
