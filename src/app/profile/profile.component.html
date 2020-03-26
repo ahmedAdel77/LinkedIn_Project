@@ -1,3 +1,4 @@
+<app-nav></app-nav>
 <div class="container margin-md" fxLayout="row" fxLayoutAlign="space-between start" fxLayoutGap="10px">
   <div class="item item-2" fxFlex="70">
     <mat-card class="maincard">
@@ -217,6 +218,7 @@
             <div class="experienceandicon margin-sm">
               <img class="walimg walimg--sm" src="../../assets/images/job.jfif">
 
+
               <mat-list-item>
                 <h2>{{workplace.title}}</h2>
               </mat-list-item>
@@ -230,6 +232,7 @@
               </mat-icon>
             </div>
 
+
             <mat-list-item>
               <h3>{{workplace.location}}</h3>
             </mat-list-item>
@@ -241,8 +244,10 @@
 
 
         </div>
+
         <div class="editIcons pointer">
           <mat-icon (click)="openDialog('WorkExperience')">add</mat-icon>
+
 
         </div>
       </div>
