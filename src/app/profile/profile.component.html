@@ -160,10 +160,11 @@
   <div class="item item-2" fxFlex="70">
     <mat-card>
 
-      <mat-card-title class="spacer">About</mat-card-title>
-      <mat-card-content class="spacer">I am a Junior in Front end development graduated from faculty of computer and
-        information sciences Ain shams university
-        having skills in coding by c/c++/c# /python/HTML/CSS/JS/JQUERY/BOOTSTRAP/ANGULAR/NODEJS</mat-card-content>
+      <mat-card-title class="spacer">About <mat-icon class="penicon maincolor pointer"
+          (click)="editSummaryDialog('Summary')">create</mat-icon>
+      </mat-card-title>
+
+      <mat-card-content class="spacer">{{summ?.summary}}</mat-card-content>
     </mat-card>
   </div>
   <div class="item item-1" fxFlex="30">
@@ -212,22 +213,25 @@
       <mat-card-title>Experience</mat-card-title>
       <div class="Experiencescontainer">
         <div class="Aboutexperience">
-          <mat-list *ngFor= "let workplace of workplaces">
+          <mat-list *ngFor="let workplace of workplaces">
 
-            <div  class="experienceandicon margin-sm" >
+            <div class="experienceandicon margin-sm">
               <img class="walimg walimg--sm" src="../../assets/images/job.jfif">
 
-              <mat-list-item >
-                <h2>{{workplace.title}}</h2>
-                </mat-list-item>
-              </div>
-              <div class="experienceandicon">
 
-                <mat-list-item >
-                  <h3>{{workplace.Name}}</h3>
-                </mat-list-item>
-                <mat-icon class="penicon maincolor" (click)="editDialog('WorkExperience',workplace);">create</mat-icon>
-              </div>
+              <mat-list-item>
+                <h2>{{workplace.title}}</h2>
+              </mat-list-item>
+            </div>
+            <div class="experienceandicon">
+
+              <mat-list-item>
+                <h3>{{workplace.Name}}</h3>
+              </mat-list-item>
+              <mat-icon class="penicon maincolor pointer" (click)="editDialog('WorkExperience',workplace);">create
+              </mat-icon>
+            </div>
+
 
             <mat-list-item>
               <h3>{{workplace.location}}</h3>
@@ -240,8 +244,10 @@
 
 
         </div>
-        <div class="editIcons">
-          <mat-icon>add</mat-icon>
+
+        <div class="editIcons pointer">
+          <mat-icon (click)="openDialog('WorkExperience')">add</mat-icon>
+
 
         </div>
       </div>
@@ -259,47 +265,41 @@
       <mat-card-title>Education</mat-card-title>
       <div class="educationContainer">
         <div class="Education">
-          <mat-list>
+          <mat-list *ngFor="let e of allEducations">
             <div class="AboutEducation margin-sm">
               <img class="walimg walimg--sm" src="../../assets/images/Ain_Shams_logo.png">
 
               <div class="educationandicon">
 
                 <mat-list-item>
-                  <h2>Ain Shams University</h2>
+                  <h2><span>{{e.degree}} </span> of {{e.school}}</h2>
                 </mat-list-item>
-                <mat-icon class="penicon maincolor">create</mat-icon>
+                <mat-icon (click)="editEducationDialog('Education',e)" class="penicon maincolor pointer">create
+                </mat-icon>
               </div>
             </div>
             <mat-list-item>
-              <h3>Place</h3>
+              <h3>Field: {{e.field}}</h3>
+              <h3>Grade: {{e.grade}}</h3>
             </mat-list-item>
             <mat-list-item>
-              <h4 class="datecolor">date</h4>
+              <h4 class="datecolor">from: {{e.start}} <span> </span></h4>
+              <h4 class="datecolor"> to: {{e.end}} </h4>
+
+
+            </mat-list-item>
+            <mat-list-item>
+              <p>Activities: {{e.activity}}</p>
+            </mat-list-item>
+            <mat-list-item>
+              <p>Description: {{e.description}}</p>
             </mat-list-item>
             <mat-divider></mat-divider>
-            <div class="AboutEducation margin-sm">
-              <img class="walimg walimg--sm" src="../../assets/images/iti.png">
-              <div class="educationandicon">
-                <mat-list-item>
 
-                  <h2>9 months diploma</h2>
-
-                </mat-list-item>
-                <mat-icon class="penicon maincolor">create</mat-icon>
-              </div>
-            </div>
-            <mat-list-item>
-              <h3>Place</h3>
-            </mat-list-item>
-            <mat-list-item>
-              <h4 class="datecolor">date</h4>
-            </mat-list-item>
-            <mat-divider></mat-divider>
           </mat-list>
         </div>
         <div class="editIcons">
-          <mat-icon>add</mat-icon>
+          <mat-icon class="pointer" (click)="openDialog('Education')">add</mat-icon>
         </div>
       </div>
     </mat-card>
@@ -313,7 +313,9 @@
   fxLayoutGap.xs="0">
   <div class="item item-2" fxFlex="70">
     <mat-card>
-      <mat-card-title>Skills&Endordsment <h4>Add a new skill <mat-icon class="penicon maincolor">create</mat-icon>
+      <mat-card-title>Skills & Endorsements
+        <h4>Add a new skill
+          <mat-icon class="penicon maincolor pointer" (click)="openDialog('Skills')">create</mat-icon>
         </h4>
       </mat-card-title>
       <div class="skillsContainer">
@@ -321,17 +323,13 @@
         <div class="skills">
           <mat-card-content>
 
-            <mat-list>
+            <mat-list *ngFor="let s of skillsArr">
               <mat-list-item>
-                <h3>Front End Developer</h3>
-              </mat-list-item>
+                <h3>{{s}}
+                  <mat-icon class="penicon maincolor pointer" (click)="editSkillDialog('Skills',s)">edit</mat-icon>
+                 <mat-icon class="penicon maincolor pointer" (click)="onDeleteSkill(s)">delete</mat-icon>
+                </h3>
 
-              <mat-list-item>
-                <h4><strong>someone name</strong> has endrosed you</h4>
-              </mat-list-item>
-              <mat-divider></mat-divider>
-              <mat-list-item>
-                <h3>Front End Developer</h3>
               </mat-list-item>
 
               <mat-list-item>
@@ -345,6 +343,9 @@
         <div class="editSkils">
 
 
+        </div>
+        <div class="editIcons">
+          <mat-icon class="pointer" (click)="openDialog('Skills')">add</mat-icon>
         </div>
       </div>
 

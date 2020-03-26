@@ -23,12 +23,14 @@ export class WorkExperienceComponent implements OnInit {
   ) { }
   clientexperience: Experience;
   editflag: boolean =false;
+  deleteflag: boolean =false;
   worktype: EmploymentType[];
 
   ngOnInit() {
     console.log(this.data);
     if (this.data) {
      this.editflag=true;
+     this.deleteflag=true;
       this.clientexperience = this.data.empdata;
     }
     else {
@@ -52,8 +54,18 @@ export class WorkExperienceComponent implements OnInit {
   onsubmit(myform: NgForm) {
     console.log(this.clientexperience);
     this.clientworkserv.Add(JSON.parse(JSON.stringify(this.clientexperience)));
+    this.dialogRef.close();
     myform.reset();
+
+
   }
+  onsave(){
+ this.dialogRef.close();
+  }
+  ondelete(){
+   this.clientworkserv.deletebyId(this.clientexperience.id); 
+   this.dialogRef.close();
+     }
   change() {
 
 
@@ -68,5 +80,8 @@ export class WorkExperienceComponent implements OnInit {
     if (this.clientexperience.endDate > new Date()) {
       return true;
     } else return false;
+  }
+  onNoClick(): void {
+    this.dialogRef.close();
   }
 }
