@@ -65,6 +65,14 @@ import { SharedPostComponent } from './shared-post/shared-post.component';
 import { NetworkComponent } from './network/network.component';
 import { SharedComponent } from './shared/shared.component';
 import { SignoutComponent } from './signout/signout.component';
+import { InvitatonItemComponent } from './network/invitaton-item/invitaton-item.component';
+import { ConnectionsComponent } from './network/connections/connections.component';
+import { NetworkSerivce } from './network/network.service';
+import { ConnectionpageComponent } from './network/connectionpage/connectionpage.component';
+import { InvitationListComponent } from './network/invitation-list/invitation-list.component';
+import { MayknowListComponent } from './network/mayknow-list/mayknow-list.component';
+import { MayknowItemComponent } from './network/mayknow-item/mayknow-item.component';
+import { SidebarComponent } from './network/sidebar/sidebar.component';
 
 
 @NgModule({
@@ -93,7 +101,14 @@ import { SignoutComponent } from './signout/signout.component';
     SharedPostComponent,
     NetworkComponent,
     SharedComponent,
-    SignoutComponent
+    SignoutComponent,
+    InvitatonItemComponent,
+    ConnectionsComponent,
+    ConnectionpageComponent,
+    InvitationListComponent,
+    MayknowListComponent,
+    MayknowItemComponent,
+    SidebarComponent
   ],
   imports: [
     BrowserModule,
@@ -137,7 +152,7 @@ import { SignoutComponent } from './signout/signout.component';
     MatPaginatorModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [NetworkSerivce],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

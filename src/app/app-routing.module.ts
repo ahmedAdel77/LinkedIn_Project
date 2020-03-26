@@ -8,6 +8,7 @@ import { SigninComponent } from './registeration/signin/signin.component';
 import { NetworkComponent } from './network/network.component';
 import { PostComponent } from './post/post.component';
 import { SignoutComponent } from './signout/signout.component';
+import { ConnectionpageComponent } from './network/connectionpage/connectionpage.component';
 
 
 const routes: Routes = [
@@ -18,6 +19,8 @@ const routes: Routes = [
   { path: 'network', component: NetworkComponent},
   { path: 'home', component: PostComponent},
   { path: 'signout', component: SignoutComponent},
+
+  { path: 'connectionpage', component: ConnectionpageComponent},
 
 
 

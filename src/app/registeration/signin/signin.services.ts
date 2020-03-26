@@ -43,16 +43,16 @@ export class AuthService
               errorMessage = 'This email exists already';
               break;
             case 'EMAIL_NOT_FOUND':
-              errorMessage = 'This email does not exist.';
+              errorMessage = 'This email does not exist';
               break;
             case 'INVALID_PASSWORD':
-              errorMessage = 'This password is not correct.';
+              errorMessage = 'The Password not Correct ';
               break;
           }
           return throwError(errorMessage);
         }),  tap( error => {
 
-          this.handleAuthentication(error.email, error.localId , error.idToken , +error.expiresIn )
+          this.handleAuthentication(error.email, error.localId , error.idToken , +error.expiresIn );
         }));
 
       }
