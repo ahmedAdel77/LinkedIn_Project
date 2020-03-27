@@ -1,5 +1,5 @@
 <mat-card-header fxLayout="row" fxLayoutAlign="space-between center">
-  <mat-card-title>Create A Post</mat-card-title>
+  <mat-card-title>Edit Post</mat-card-title>
   <button mat-flat-button fxFlexAlign="auto" (click)="onNoClick()">
     <mat-icon>close</mat-icon>
   </button>
@@ -19,7 +19,8 @@
     <mat-form-field appearance="fill" style="width: 100%;">
       <mat-label>What do you want to talk about?</mat-label>
       <textarea matInput rows="20" cols="100" [(ngModel)]="post.text" name="text" #postText="ngModel" cdkFocusInitial
-        required></textarea>
+        required>
+    </textarea>
     </mat-form-field>
   </mat-card-content>
 
@@ -38,7 +39,7 @@
     </button>
 
     <button mat-raised-button fxFlexAlign="end" fxFlexOffset="45" color="primary" style="color: aliceblue;"
-      [disabled]="postText.invalid || (postText.untouched && postText.pristine)" (click)="onNoClick()">Post</button>
+      [disabled]="postText.invalid" (click)="onNoClick()">Edit</button>
 
   </mat-card-actions>
 

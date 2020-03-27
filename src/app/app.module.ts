@@ -1,12 +1,12 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import{FormsModule} from"@angular/forms";
+import { FormsModule } from "@angular/forms";
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatNativeDateModule } from "@angular/material/core";
 import { FlexLayoutModule } from '@angular/flex-layout';
-import {HttpClientModule} from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 
 
 //Angular Material Components
@@ -67,12 +67,16 @@ import { SharedComponent } from './shared/shared.component';
 import { SignoutComponent } from './signout/signout.component';
 import { InvitatonItemComponent } from './network/invitaton-item/invitaton-item.component';
 import { ConnectionsComponent } from './network/connections/connections.component';
-import { NetworkSerivce } from './network/network.service';
 import { ConnectionpageComponent } from './network/connectionpage/connectionpage.component';
 import { InvitationListComponent } from './network/invitation-list/invitation-list.component';
 import { MayknowListComponent } from './network/mayknow-list/mayknow-list.component';
 import { MayknowItemComponent } from './network/mayknow-item/mayknow-item.component';
 import { SidebarComponent } from './network/sidebar/sidebar.component';
+import { PostEditComponent } from './post/post-edit/post-edit.component';
+import { HomeComponent } from './home/home.component';
+import { NetworkSerivce } from './network/network.service';
+import { PostService } from './post/post.service';
+
 
 
 @NgModule({
@@ -108,7 +112,9 @@ import { SidebarComponent } from './network/sidebar/sidebar.component';
     InvitationListComponent,
     MayknowListComponent,
     MayknowItemComponent,
-    SidebarComponent
+    SidebarComponent,
+    PostEditComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
@@ -152,7 +158,10 @@ import { SidebarComponent } from './network/sidebar/sidebar.component';
     MatPaginatorModule,
     HttpClientModule
   ],
-  providers: [NetworkSerivce],
+  providers: [
+    NetworkSerivce,
+    PostService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
