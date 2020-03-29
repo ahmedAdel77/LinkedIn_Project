@@ -9,7 +9,7 @@ import { PostCreateComponent } from '../post-create/post-create.component';
 })
 export class PostBoxComponent implements OnInit {
   ngOnInit(): void {
-    throw new Error('Method not implemented.');
+    // throw new Error('Method not implemented.');
   }
 
   constructor(public dialog: MatDialog) { }

@@ -46,7 +46,8 @@ mat-toolbar {
 
 .reaction-icon-on-post {
   font-size: 20px;
-  color: dodgerblue;
+  // color: #0073b1;
+  color: rgba(0, 0, 0, .6);
   margin-right: 5px;
 }
 
@@ -79,4 +80,3 @@ main {
   margin: auto;
   position: relative;
 }
-

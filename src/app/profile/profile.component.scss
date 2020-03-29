@@ -128,7 +128,8 @@
   justify-content: space-between;
 }
 
-.AboutEducation,.Aboutexperience {
+.AboutEducation,
+.Aboutexperience {
   display: flex;
   justify-content: flex-start;
 }
@@ -171,4 +172,18 @@
 
 button.mat-menu-item {
   padding-right: 32px;
+}
+
+.example-chip-list {
+  width: 100% !important;
+  // min-width: 200px;
+  max-width: 100% !important;
+}
+
+.mat-card-content {
+  width: 100% !important;
+}
+
+.mat-form-field-infix {
+  width: 100% !important;
 }

@@ -6,6 +6,8 @@ import {
   MatDialogRef,
   MAT_DIALOG_DATA
 } from "@angular/material/dialog";
+import {COMMA, ENTER} from '@angular/cdk/keycodes';
+import {MatChipInputEvent} from '@angular/material/chips';
 import { LanguageComponent } from "../dialogues/language/language.component";
 import { SkillsComponent } from "../dialogues/skills/skills.component";
 import { EducationComponent } from "../dialogues/education/education.component";
@@ -199,4 +201,11 @@ export class ProfileComponent implements OnInit {
       }
     });
   }
+
+  visible = true;
+  selectable = true;
+  removable = true;
+  addOnBlur = true;
+  readonly separatorKeysCodes: number[] = [ENTER, COMMA];
+
 }

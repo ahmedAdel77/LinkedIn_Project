@@ -8,6 +8,8 @@ import { SigninComponent } from './registeration/signin/signin.component';
 import { NetworkComponent } from './network/network.component';
 import { PostComponent } from './post/post.component';
 import { SignoutComponent } from './signout/signout.component';
+import { ConnectionpageComponent } from './network/connectionpage/connectionpage.component';
+import { HomeComponent } from './home/home.component';
 
 
 const routes: Routes = [
@@ -15,9 +17,11 @@ const routes: Routes = [
   { path: 'signin', component: SigninComponent },
   { path: 'profile', component: ProfileComponent },
   { path: 'signup', component: SignupComponent },
-  { path: 'network', component: NetworkComponent},
-  { path: 'home', component: PostComponent},
-  { path: 'signout', component: SignoutComponent},
+  { path: 'network', component: NetworkComponent },
+  { path: 'home', component: HomeComponent },
+  { path: 'signout', component: SignoutComponent },
+
+  { path: 'connectionpage', component: ConnectionpageComponent },
 
 
 
@@ -30,4 +34,4 @@ const routes: Routes = [
 })
 export class AppRoutingModule {
 
- }
+}
