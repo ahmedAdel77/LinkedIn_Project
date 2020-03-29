@@ -12,15 +12,12 @@ export class SkillsServiceService {
     // newSkill.id = this.skillsArr.length + 1;
     // this.skillsArr = [...newSkill];
     this.skillsArr.push(...newSkill); //to merge arrays
-    console.log(
-      this.skillsArr + " len " + this.skillsArr.length + "  from service"
-    );
   }
 
   getAll() {
-    console.log(
-      "skills Arr getall" + JSON.parse(JSON.stringify(this.skillsArr))
-    );
+    // console.log(
+    //   "skills Arr getall" + JSON.parse(JSON.stringify(this.skillsArr))
+    // );
     return JSON.stringify(this.skillsArr);
   }
   getbyId(id: number): Skill {

@@ -21,6 +21,6 @@
   <div class="skill-tag">
     <span class="tag" *ngFor="let s of skillsArr">{{s.name}}</span>
   </div>
-  <button (click)="onSubmit()" class="bg-main-color text-white saveBtn" mat-raised-button
+  <button (click)="onSubmit(skillTag)" class="bg-main-color text-white saveBtn" mat-raised-button
     [disabled]="!skillsForm.form.valid">Save</button>
 </div>
